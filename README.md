@@ -71,7 +71,7 @@ Ngrok is now ready to be used by the script.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/<your-username>/ultra-stealth-shell.git
+git clone https://github.com/atmajkhatavkar404/ultra-stealth-shell.git
 cd ultra-stealth-shell
 python3 ultra_stealth_shell.py
 ```
